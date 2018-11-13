@@ -1,6 +1,8 @@
-function produceDrivingRange(blocks) {return function(blockRange) {
-const blocksToIntegers = parseInt(blockRange)
-console.log(blocksToIntegers[0])
-  return blocksToIntegers > blocks ? `${blockRange - blocks} out of range`:`within range by ${blockRange - blocks}`
+function produceDrivingRange(blocks) {return function(startBlock, endBlock) {
+const startBlockToInteger = parseInt(startBlock)
+const endBlockToInteger = parseInt(endBlock)
+const blockRange = endBlockToInteger - startBlockToInteger
+const withinRange = Math.abs(blockRange - blocks)
+  return blockRange > blocks ? `${withinRange} out of range`:`within range by ${withinRange}`
   }
 }
