@@ -1,4 +1,4 @@
 function produceDrivingRange(blocks) {return function(blockRange) {
-  return blockRange > blocks ? ``:true
+  return blockRange > blocks ? `${blockRange - blocks}`:true
   }
 }
